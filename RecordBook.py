@@ -20,9 +20,14 @@ class RecordBook (object):
         for key in self.rating.keys():
             str += "\n%s: %s" % (key, self.rating[key])
         return str
-
+    
+     def past(self, param):
+        self.rating.update(param)
 
 if __name__ == "__main__":
     stud = RecordBook("As", "Sd", "Jp", {'Матан': 5, 'Матан2': 3, 'Матан3': 4}, 5)
     print(stud.avgrate())
     print(stud.show())
+     stud1 = RecordBook("Петров", "Аркадий", "Павлович", {'История': 4, 'Иинформатика': 4, 'Философия': 4}, 1)
+    stud1.past({"Математика": 5})
+    print(stud1.show())
