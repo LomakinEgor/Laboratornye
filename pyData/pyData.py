@@ -1,11 +1,17 @@
 from pyDatalog import pyDatalog
 pyDatalog.create_terms('X, Y, Z, H, doctor, spec, simpt, patient, depart, dep_simpt, pat_doc, pat_dep')
-
+pyDatalog.create_terms('K, L, nurse, helps_the_doctor)
+                       
 +(doctor['Dr. Alex'] == 'Lor')
 +(doctor['Dr. Mary'] == 'Oculist')
 +(doctor['Dr. Mitch'] == 'Therapist')
 +(doctor['Dr. Marty'] == 'Orthopedist')
 +(doctor['Dr. Kenny'] == 'Cardiologist')
++(nurse ['Mary']=='Dr. Alex')
++(nurse ['John']=='Dr. Mary')
++(nurse ['Mary']=='Dr. Alex')
++(nurse ['Mary']=='Dr. Alex')
++(nurse ['Mary']=='Dr. Alex')                      
 +(spec['Nose'] == 'Lor')
 +(spec['Ears'] == 'Lor')
 +(spec['Throat'] =='Lor')
