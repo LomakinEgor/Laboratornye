@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    *<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Лабораторная №8</title>
+    <link type="text/css" rel = "stylesheet" href = "/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        {% for row in data %}
+            <span>{{row[1]['number']}}</span>
+            <span>{{row[1]['country']}}</span>
+            <span>{{row[1]['2014']}}</span>
+            <span>{{row[1]['2013']}}</span>
+            <span>{{row[1]['2012']}}</span>
+        {% endfor %}
+    </div>
+</body>
